@@ -27,6 +27,8 @@ while True:
         # Mandar a llamar la funcion de argrgar empleados
     elif opcion == "3":
         print("Has elegido la opcion 3")
+        id = input("por favor inserta el id del empleado >> ")
+        print("el numero de empleado a modificar es el ", id)
         # Implementa el código para que se pida el id del empleado
         # Imprimir el mensaje de: Por favor inserta el id del empleado
         # identificador = 
@@ -34,6 +36,8 @@ while True:
         # print(identificador)
     elif opcion == "4":
         print("Has elegido la opcion 4")
+        id = input("por favor inserta el id del empleado >> ")
+        print("el numero de empleado a eliminar es el ", id)
         # Implementa el código para que se pida el id del empleado
         # Imprimir el mensaje de: Por favor inserta el id del empleado
         # identificador = 
