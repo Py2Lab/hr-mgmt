@@ -23,8 +23,41 @@ while True:
         print("Has elegido la opcion 1")
         # Mandar a llamar la funcion de consultar empleados
     elif opcion == "2":
+        print("********************************")
         print("Has elegido la opcion 2")
-        # Mandar a llamar la funcion de argrgar empleados
+        print("********************************")
+        nombre = input("Introduce el nombre del empleado >> ")
+        apellido_paterno = input("Introduce el apellido paterno >> ")
+        apellido_materno = input("Introduce el apellido materno >> ")
+        fecha_nacimiento = input("Introduce la fecha de nacimiento AAAA/MM/DD >> ")
+        puesto = input("Introduce el puesto del empleado >> ")
+        profesion = input("Introduce la profesion del empleado >> ")
+        especialidad = input("Introduce la especialidad del empleado >> ")
+        dias_vacaciones = input("Introduce los días de vacaciones >> ")
+        sueldo = input("Introduce el sueldo del empleado >> ")
+
+        print("********************************")
+        print("Los datos del empleado son: ")
+        print("********************************")
+        print("Nombre: ", nombre)
+        print("Apellido Paterno: ", apellido_paterno)
+        print("Apellido Materno", apellido_materno)
+        print("Fecha de Nacimiento: ", fecha_nacimiento)
+        print("Puesto: ", puesto)
+        print("Profesion: ", profesion)
+        print("Especialidad: ", especialidad)
+        print("Días de vacaciones: ", dias_vacaciones)
+        print("Sueldo: ", sueldo)
+        print("********************************")
+        correcto = input("¿Son correctos los datos del emplead@? (S/N)")
+        if correcto == "S":
+            print("Empleado Guardado")
+        elif correcto == "N":
+            print("Empleado no Guardado")
+        else:
+            break
+        print("********************************")
+        # Mandar a llamar la funcion de argregar empleados
     elif opcion == "3":
         print("Has elegido la opcion 3")
         id = input("por favor inserta el id del empleado >> ")
