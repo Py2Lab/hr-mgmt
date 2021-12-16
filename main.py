@@ -90,43 +90,50 @@ while True:
         print("Sueldo: ", sueldo)
         print("********************************")
 
-        dato_modificar = input("¿Qué dato desea modificar? (Nombre|Paterno|Materno|Nacimiento|Puesto|Profesion|Especialdiad|Vacaciones|Sueldo) >> ")
+        while True:
 
-        if dato_modificar == "Nombre":
-            nombre = input("Introduzca el nuevo nombre >> ")
-        elif dato_modificar == "Paterno":
-            apellido_paterno = input("Introduzca el nuevo apellido paterno >> ")
-        elif dato_modificar == "Materno":
-            apellido_materno = input("Introduce el nuevo apellido materno >> ")
-        elif dato_modificar == "Nacimiento":
-            fecha_nacimiento = input("Introduce la nueva fecha de nacimiento >> ")
-        elif dato_modificar == "Puesto":
-            puesto = input("Introduce el nuevo puesto >> ")
-        elif dato_modificar == "Profesion":
-            profesion = input("Introduce la nueva profesion >> ")
-        elif dato_modificar == "Especialidad":
-            especialidad = input("Introduce la nueva especialidad >> ")
-        elif dato_modificar == "Vacaciones":
-            dias_vacaciones = input("Introduce los nuevos dias de vacaciones >> ")
-        elif dato_modificar == "Sueldo":
-            sueldo = input("Introduce el nuevo sueldo >> ")
-        else:
-            print("Opción no válida")
-            break
+            dato_modificar = input("¿Qué dato desea modificar? (Nombre|Paterno|Materno|Nacimiento|Puesto|Profesion|Especialdiad|Vacaciones|Sueldo) >> ")
 
-        print("********************************")
-        print("Los datos modificados del empleado son: ")
-        print("********************************")
-        print("Nombre: ", nombre)
-        print("Apellido Paterno: ", apellido_paterno)
-        print("Apellido Materno", apellido_materno)
-        print("Fecha de Nacimiento: ", fecha_nacimiento)
-        print("Puesto: ", puesto)
-        print("Profesion: ", profesion)
-        print("Especialidad: ", especialidad)
-        print("Días de vacaciones: ", dias_vacaciones)
-        print("Sueldo: ", sueldo)
-        print("********************************")
+            if dato_modificar == "Nombre":
+                nombre = input("Introduzca el nuevo nombre >> ")
+            elif dato_modificar == "Paterno":
+                apellido_paterno = input("Introduzca el nuevo apellido paterno >> ")
+            elif dato_modificar == "Materno":
+                apellido_materno = input("Introduce el nuevo apellido materno >> ")
+            elif dato_modificar == "Nacimiento":
+                fecha_nacimiento = input("Introduce la nueva fecha de nacimiento >> ")
+            elif dato_modificar == "Puesto":
+                puesto = input("Introduce el nuevo puesto >> ")
+            elif dato_modificar == "Profesion":
+                profesion = input("Introduce la nueva profesion >> ")
+            elif dato_modificar == "Especialidad":
+                especialidad = input("Introduce la nueva especialidad >> ")
+            elif dato_modificar == "Vacaciones":
+                dias_vacaciones = input("Introduce los nuevos dias de vacaciones >> ")
+            elif dato_modificar == "Sueldo":
+                sueldo = input("Introduce el nuevo sueldo >> ")
+            elif dato_modificar == "Terminar":
+                # Implementar la edición del empleado en la base de datos
+                # UPDATE employee set name = nombre, last_name=apellido_paterno WHERE id = id
+                print("Emplead@ modificado exitosamente")
+                break
+            else:
+                print("Opción no válida")
+                break
+
+            print("********************************")
+            print("Los datos modificados del empleado son: ")
+            print("********************************")
+            print("Nombre: ", nombre)
+            print("Apellido Paterno: ", apellido_paterno)
+            print("Apellido Materno", apellido_materno)
+            print("Fecha de Nacimiento: ", fecha_nacimiento)
+            print("Puesto: ", puesto)
+            print("Profesion: ", profesion)
+            print("Especialidad: ", especialidad)
+            print("Días de vacaciones: ", dias_vacaciones)
+            print("Sueldo: ", sueldo)
+            print("********************************")
 
     elif opcion == "4":
         print("Has elegido la opcion 4")
