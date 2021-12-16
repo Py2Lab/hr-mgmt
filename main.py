@@ -33,6 +33,14 @@ while True:
 
             print("Número de empleado: ", id)
             print("Nombre: ", nombre)
+            print("Apellido paterno", apellido_paterno)
+            print("Apellido materno", apellido_materno)
+            print("Fecha de nacimiento", fecha_nacimiento)
+            print("Puesto", puesto)
+            print("Profesion", profesion)
+            print("Especialidad", especialidad)
+            print("Dias de vacaciones", dias_vacaciones)
+            print("Sueldo", sueldo)
 
         elif opcion_consulta == "Todos":
             print("Todos los empleados")
