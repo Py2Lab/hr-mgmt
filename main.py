@@ -22,6 +22,42 @@ while True:
     if opcion == "1":
         print("Has elegido la opcion 1")
         # Mandar a llamar la funcion de consultar empleados
+        opcion_consulta = input("¿Consultar empleado por ID o todos los empleados (Id|Todos)? >> ")
+        if opcion_consulta == "Id":
+            # Mostrar los datos del empleado con ese id
+            id = input("Introduza el número de empleado a consultar >> ")
+            # TODO: Implementar la consulta por empleado a la base de datos
+            # SELECT * FROM employee WHERE id = id;
+           
+            # Agregar las variables de los datos faltantes del empleado
+
+            nombre = "Pedro"
+            apellido_paterno = "123456"
+            apellido_materno = "123456"
+            fecha_nacimiento = "123456"
+            puesto = "123456"
+            profesion = "123456"
+            especialidad = "123456"
+            dias_vacaciones = "123456"
+            sueldo = "123456"
+
+            print("Número de empleado: ", id)
+            print("Nombre: ", nombre)
+            print("Apellido paterno", apellido_paterno)
+            print("Apellido materno", apellido_materno)
+            print("Fecha de nacimiento", fecha_nacimiento)
+            print("Puesto", puesto)
+            print("Profesion", profesion)
+            print("Especialidad", especialidad)
+            print("Dias de vacaciones", dias_vacaciones)
+            print("Sueldo", sueldo)
+
+        elif opcion_consulta == "Todos":
+            print("Todos los empleados")
+            # TODO: Implementar consulta a la base de datos
+            # SELECT * FROM employee;
+        else:
+            print("Opción no válida")
     elif opcion == "2":
         print("********************************")
         print("Has elegido la opcion 2")
