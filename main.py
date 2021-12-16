@@ -96,7 +96,20 @@ while True:
             nombre = input("Introduzca el nuevo nombre >> ")
         elif dato_modificar == "Paterno":
             apellido_paterno = input("Introduzca el nuevo apellido paterno >> ")
-        # Hacer el código para los demás casos
+        elif dato_modificar == "Materno":
+            apellido_materno = input("Introduce el nuevo apellido materno >> ")
+        elif dato_modificar == "Nacimiento":
+            fecha_nacimiento = input("Introduce la nueva fecha de nacimiento >> ")
+        elif dato_modificar == "Puesto":
+            puesto = input("Introduce el nuevo puesto >> ")
+        elif dato_modificar == "Profesion":
+            profesion = input("Introduce la nueva profesion >> ")
+        elif dato_modificar == "Especialidad":
+            especialidad = input("Introduce la nueva especialidad >> ")
+        elif dato_modificar == "Vacaciones":
+            dias_vacaciones = input("Introduce los nuevos dias de vacaciones >> ")
+        elif dato_modificar == "Sueldo":
+            sueldo = input("Introduce el nuevo sueldo >> ")
         else:
             print("Opción no válida")
             break
