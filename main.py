@@ -60,23 +60,72 @@ while True:
         # Mandar a llamar la funcion de argregar empleados
     elif opcion == "3":
         print("Has elegido la opcion 3")
-        id = input("por favor inserta el id del empleado >> ")
-        print("el numero de empleado a modificar es el ", id)
-        # Implementa el código para que se pida el id del empleado
-        # Imprimir el mensaje de: Por favor inserta el id del empleado
-        # identificador = 
-        # Imprimir el mensaje de: El empleado a borrar es el << id >>
-        # print(identificador)
+        id = input("Por favor inserta el id del empleado >> ")
+        print("El número de empleado a modificar es el ", id)
+        # Buscar al empleado en la base con el id -> SELECT * FROM employee WHERE id = id
+        nombre = "123456"
+        apellido_paterno = "123456"
+        apellido_materno = "123456"
+        fecha_nacimiento = "123456"
+        puesto = "123456"
+        profesion = "123456"
+        especialidad = "123456"
+        dias_vacaciones = "123456"
+        sueldo = "123456"
+
+        print("Los datos del empleado a modificar son: ")
+
+
+        print("********************************")
+        print("Los datos del empleado son: ")
+        print("********************************")
+        print("Nombre: ", nombre)
+        print("Apellido Paterno: ", apellido_paterno)
+        print("Apellido Materno", apellido_materno)
+        print("Fecha de Nacimiento: ", fecha_nacimiento)
+        print("Puesto: ", puesto)
+        print("Profesion: ", profesion)
+        print("Especialidad: ", especialidad)
+        print("Días de vacaciones: ", dias_vacaciones)
+        print("Sueldo: ", sueldo)
+        print("********************************")
+
+        dato_modificar = input("¿Qué dato desea modificar? (Nombre|Paterno|Materno|Nacimiento|Puesto|Profesion|Especialdiad|Vacaciones|Sueldo) >> ")
+
+        if dato_modificar == "Nombre":
+            nombre = input("Introduzca el nuevo nombre >> ")
+        elif dato_modificar == "Paterno":
+            apellido_paterno = input("Introduzca el nuevo apellido paterno >> ")
+        # Hacer el código para los demás casos
+        else:
+            print("Opción no válida")
+            break
+
+        print("********************************")
+        print("Los datos modificados del empleado son: ")
+        print("********************************")
+        print("Nombre: ", nombre)
+        print("Apellido Paterno: ", apellido_paterno)
+        print("Apellido Materno", apellido_materno)
+        print("Fecha de Nacimiento: ", fecha_nacimiento)
+        print("Puesto: ", puesto)
+        print("Profesion: ", profesion)
+        print("Especialidad: ", especialidad)
+        print("Días de vacaciones: ", dias_vacaciones)
+        print("Sueldo: ", sueldo)
+        print("********************************")
+
     elif opcion == "4":
         print("Has elegido la opcion 4")
-        id = input("por favor inserta el id del empleado >> ")
-        print("el numero de empleado a eliminar es el ", id)
+        id = input("Por favor inserta el id del empleado >> ")
+        print("El número de empleado a eliminar es el ", id)
         # Implementa el código para que se pida el id del empleado
         # Imprimir el mensaje de: Por favor inserta el id del empleado
         # identificador = 
         # Imprimir el mensaje de: El empleado a borrar es el << id >>
         # print(identificador)
     elif opcion == "5":
+        print("¡Adiós, vaquer@!")
         break
     else:
         print("No has elegido una opcion válida")
