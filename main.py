@@ -1,6 +1,25 @@
 import os
 
 
+def imprime_datos_empleado(id, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, puesto, profesion, especialidad, dias_vacaciones, sueldo):
+
+    print("Número de empleado: ", id)
+    print("Nombre: ", nombre)
+    print("Apellido paterno", apellido_paterno)
+    print("Apellido materno", apellido_materno)
+    print("Fecha de nacimiento", fecha_nacimiento)
+    print("Puesto", puesto)
+    print("Profesion", profesion)
+    print("Especialidad", especialidad)
+    print("Dias de vacaciones", dias_vacaciones)
+    print("Sueldo", sueldo)
+
+def imprime_cabecera(cabecera):
+    """
+    Imprime la cabecera entre asteriscos
+    """
+    pass
+
 def menu():
     """
     Muestra el menu principal en la pantalla
@@ -28,12 +47,10 @@ while True:
             id = input("Introduza el número de empleado a consultar >> ")
             # TODO: Implementar la consulta por empleado a la base de datos
             # SELECT * FROM employee WHERE id = id;
-           
-            # Agregar las variables de los datos faltantes del empleado
 
             nombre = "Pedro"
-            apellido_paterno = "123456"
-            apellido_materno = "123456"
+            apellido_paterno = "Moreno"
+            apellido_materno = "Perez"
             fecha_nacimiento = "123456"
             puesto = "123456"
             profesion = "123456"
@@ -41,16 +58,7 @@ while True:
             dias_vacaciones = "123456"
             sueldo = "123456"
 
-            print("Número de empleado: ", id)
-            print("Nombre: ", nombre)
-            print("Apellido paterno", apellido_paterno)
-            print("Apellido materno", apellido_materno)
-            print("Fecha de nacimiento", fecha_nacimiento)
-            print("Puesto", puesto)
-            print("Profesion", profesion)
-            print("Especialidad", especialidad)
-            print("Dias de vacaciones", dias_vacaciones)
-            print("Sueldo", sueldo)
+            imprime_datos_empleado(id, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, puesto, profesion, especialidad, dias_vacaciones, sueldo)
 
         elif opcion_consulta == "Todos":
             print("Todos los empleados")
@@ -75,17 +83,9 @@ while True:
         print("********************************")
         print("Los datos del empleado son: ")
         print("********************************")
-        print("Nombre: ", nombre)
-        print("Apellido Paterno: ", apellido_paterno)
-        print("Apellido Materno", apellido_materno)
-        print("Fecha de Nacimiento: ", fecha_nacimiento)
-        print("Puesto: ", puesto)
-        print("Profesion: ", profesion)
-        print("Especialidad: ", especialidad)
-        print("Días de vacaciones: ", dias_vacaciones)
-        print("Sueldo: ", sueldo)
+        imprime_datos_empleado("-", nombre, apellido_paterno, apellido_materno, fecha_nacimiento, puesto, profesion, especialidad, dias_vacaciones, sueldo)
         print("********************************")
-        correcto = input("¿Son correctos los datos del emplead@? (S/N)")
+        correcto = input("¿Son correctos los datos del emplead@? (S/N) >> ")
         if correcto == "S":
             print("Empleado Guardado")
         elif correcto == "N":
@@ -115,15 +115,8 @@ while True:
         print("********************************")
         print("Los datos del empleado son: ")
         print("********************************")
-        print("Nombre: ", nombre)
-        print("Apellido Paterno: ", apellido_paterno)
-        print("Apellido Materno", apellido_materno)
-        print("Fecha de Nacimiento: ", fecha_nacimiento)
-        print("Puesto: ", puesto)
-        print("Profesion: ", profesion)
-        print("Especialidad: ", especialidad)
-        print("Días de vacaciones: ", dias_vacaciones)
-        print("Sueldo: ", sueldo)
+        
+        imprime_datos_empleado(id, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, puesto, profesion, especialidad, dias_vacaciones, sueldo)
         print("********************************")
 
         while True:
@@ -160,15 +153,7 @@ while True:
             print("********************************")
             print("Los datos modificados del empleado son: ")
             print("********************************")
-            print("Nombre: ", nombre)
-            print("Apellido Paterno: ", apellido_paterno)
-            print("Apellido Materno", apellido_materno)
-            print("Fecha de Nacimiento: ", fecha_nacimiento)
-            print("Puesto: ", puesto)
-            print("Profesion: ", profesion)
-            print("Especialidad: ", especialidad)
-            print("Días de vacaciones: ", dias_vacaciones)
-            print("Sueldo: ", sueldo)
+            imprime_datos_empleado(id, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, puesto, profesion, especialidad, dias_vacaciones, sueldo)
             print("********************************")
 
     elif opcion == "4":
