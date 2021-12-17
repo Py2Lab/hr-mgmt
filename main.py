@@ -18,7 +18,9 @@ def imprime_cabecera(cabecera):
     """
     Imprime la cabecera entre asteriscos
     """
-    pass
+    print("**********************************")
+    print(cabecera)
+    print("**********************************")
 
 def menu():
     """
@@ -40,6 +42,7 @@ while True:
 
     if opcion == "1":
         print("Has elegido la opcion 1")
+        imprime_cabecera("Has elegido la opcion 1")
         # Mandar a llamar la funcion de consultar empleados
         opcion_consulta = input("¿Consultar empleado por ID o todos los empleados (Id|Todos)? >> ")
         if opcion_consulta == "Id":
@@ -67,9 +70,9 @@ while True:
         else:
             print("Opción no válida")
     elif opcion == "2":
-        print("********************************")
-        print("Has elegido la opcion 2")
-        print("********************************")
+
+        imprime_cabecera("Has elegido la opcion 2")
+
         nombre = input("Introduce el nombre del empleado >> ")
         apellido_paterno = input("Introduce el apellido paterno >> ")
         apellido_materno = input("Introduce el apellido materno >> ")
@@ -80,9 +83,9 @@ while True:
         dias_vacaciones = input("Introduce los días de vacaciones >> ")
         sueldo = input("Introduce el sueldo del empleado >> ")
 
-        print("********************************")
-        print("Los datos del empleado son: ")
-        print("********************************")
+        
+        imprime_cabecera("Los datos del empleado son: ")
+
         imprime_datos_empleado("-", nombre, apellido_paterno, apellido_materno, fecha_nacimiento, puesto, profesion, especialidad, dias_vacaciones, sueldo)
         print("********************************")
         correcto = input("¿Son correctos los datos del emplead@? (S/N) >> ")
@@ -96,6 +99,7 @@ while True:
         # Mandar a llamar la funcion de argregar empleados
     elif opcion == "3":
         print("Has elegido la opcion 3")
+        imprime_cabecera("Has elegido la opcion 3")
         id = input("Por favor inserta el id del empleado >> ")
         print("El número de empleado a modificar es el ", id)
         # Buscar al empleado en la base con el id -> SELECT * FROM employee WHERE id = id
@@ -112,9 +116,8 @@ while True:
         print("Los datos del empleado a modificar son: ")
 
 
-        print("********************************")
-        print("Los datos del empleado son: ")
-        print("********************************")
+        
+        imprime_cabecera("Los datos del empleado son: ")
         
         imprime_datos_empleado(id, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, puesto, profesion, especialidad, dias_vacaciones, sueldo)
         print("********************************")
@@ -153,11 +156,14 @@ while True:
             print("********************************")
             print("Los datos modificados del empleado son: ")
             print("********************************")
+            imprime_cabecera("Los datos modificados del empleado son: ")
             imprime_datos_empleado(id, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, puesto, profesion, especialidad, dias_vacaciones, sueldo)
             print("********************************")
 
     elif opcion == "4":
         print("Has elegido la opcion 4")
+        imprime_cabecera("Has elegido la opcion 4")
+        
         id = input("Por favor inserta el id del empleado >> ")
         print("El número de empleado a eliminar es el ", id)
         # Implementa el código para que se pida el id del empleado
