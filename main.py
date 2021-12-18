@@ -41,8 +41,9 @@ while True:
     opcion = input("Inserta una opción >> ")
 
     if opcion == "1":
-        print("Has elegido la opcion 1")
+
         imprime_cabecera("Has elegido la opcion 1")
+
         # Mandar a llamar la funcion de consultar empleados
         opcion_consulta = input("¿Consultar empleado por ID o todos los empleados (Id|Todos)? >> ")
         if opcion_consulta == "Id":
@@ -98,8 +99,9 @@ while True:
         print("********************************")
         # Mandar a llamar la funcion de argregar empleados
     elif opcion == "3":
-        print("Has elegido la opcion 3")
+        
         imprime_cabecera("Has elegido la opcion 3")
+
         id = input("Por favor inserta el id del empleado >> ")
         print("El número de empleado a modificar es el ", id)
         # Buscar al empleado en la base con el id -> SELECT * FROM employee WHERE id = id
@@ -153,15 +155,14 @@ while True:
                 print("Opción no válida")
                 break
 
-            print("********************************")
-            print("Los datos modificados del empleado son: ")
-            print("********************************")
+            
             imprime_cabecera("Los datos modificados del empleado son: ")
+
             imprime_datos_empleado(id, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, puesto, profesion, especialidad, dias_vacaciones, sueldo)
             print("********************************")
 
     elif opcion == "4":
-        print("Has elegido la opcion 4")
+
         imprime_cabecera("Has elegido la opcion 4")
         
         id = input("Por favor inserta el id del empleado >> ")
@@ -172,7 +173,9 @@ while True:
         # Imprimir el mensaje de: El empleado a borrar es el << id >>
         # print(identificador)
     elif opcion == "5":
-        print("¡Adiós, vaquer@!")
+
+        imprime_cabecera("¡Adiós, vaquer@!")
+        
         break
     else:
         print("No has elegido una opcion válida")
