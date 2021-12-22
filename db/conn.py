@@ -28,6 +28,6 @@ def actualiza_empleado():
 
 def elimina_empleado(empleado_id):
     # TODO: Implementar funcion
-    consulta = ""
+    consulta = "DELETE FROM empleado WHERE id={empleado_id}"
     cursor.execute(consulta)
 
