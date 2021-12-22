@@ -1,18 +1,18 @@
 import os
+from db.conn import consulta_empleados, consulta_empleado, elimina_empleado
 
-
-def imprime_datos_empleado(id, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, puesto, profesion, especialidad, dias_vacaciones, sueldo):
+def imprime_datos_empleado(id, nombre, apellido_paterno, apellido_materno, fecha_nacimineto, puesto, profecion, especialidad, dias_vacaciones, sueldo):
 
     print("Número de empleado: ", id)
     print("Nombre: ", nombre)
-    print("Apellido paterno", apellido_paterno)
-    print("Apellido materno", apellido_materno)
-    print("Fecha de nacimiento", fecha_nacimiento)
-    print("Puesto", puesto)
-    print("Profesion", profesion)
-    print("Especialidad", especialidad)
-    print("Dias de vacaciones", dias_vacaciones)
-    print("Sueldo", sueldo)
+    print("Apellido paterno: ", apellido_paterno)
+    print("Apellido materno: ", apellido_materno)
+    print("Fecha de nacimiento: ", fecha_nacimineto)
+    print("Puesto: ", puesto)
+    print("Profesion: ", profecion)
+    print("Especialidad: ", especialidad)
+    print("Dias de vacaciones: ", dias_vacaciones)
+    print("Sueldo: ", sueldo)
 
 def imprime_cabecera(cabecera):
     """
@@ -49,25 +49,16 @@ while True:
         if opcion_consulta == "Id":
             # Mostrar los datos del empleado con ese id
             id = input("Introduza el número de empleado a consultar >> ")
-            # TODO: Implementar la consulta por empleado a la base de datos
-            # SELECT * FROM employee WHERE id = id;
-
-            nombre = "Pedro"
-            apellido_paterno = "Moreno"
-            apellido_materno = "Perez"
-            fecha_nacimiento = "123456"
-            puesto = "123456"
-            profesion = "123456"
-            especialidad = "123456"
-            dias_vacaciones = "123456"
-            sueldo = "123456"
-
-            imprime_datos_empleado(id, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, puesto, profesion, especialidad, dias_vacaciones, sueldo)
+            empleado = consulta_empleado(id)
+            imprime_datos_empleado(**empleado)
 
         elif opcion_consulta == "Todos":
             print("Todos los empleados")
-            # TODO: Implementar consulta a la base de datos
-            # SELECT * FROM employee;
+            empleados = consulta_empleados()
+            for empleado in empleados:
+                imprime_datos_empleado(**empleado)
+                print("***************************")
+
         else:
             print("Opción no válida")
     elif opcion == "2":
@@ -167,9 +158,8 @@ while True:
         
         id = input("Por favor inserta el id del empleado >> ")
         print("El número de empleado a eliminar es el ", id)
+        # elimina_empleado(id)
         # Implementa el código para que se pida el id del empleado
-        # Imprimir el mensaje de: Por favor inserta el id del empleado
-        # identificador = 
         # Imprimir el mensaje de: El empleado a borrar es el << id >>
         # print(identificador)
     elif opcion == "5":
