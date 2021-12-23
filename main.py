@@ -158,10 +158,9 @@ while True:
         
         id = input("Por favor inserta el id del empleado >> ")
         print("El número de empleado a eliminar es el ", id)
-        # elimina_empleado(id)
-        # Implementa el código para que se pida el id del empleado
-        # Imprimir el mensaje de: El empleado a borrar es el << id >>
-        # print(identificador)
+        elimina_empleado(id)
+        print("Empleado eliminado con éxito")
+
     elif opcion == "5":
 
         imprime_cabecera("¡Adiós, vaquer@!")
